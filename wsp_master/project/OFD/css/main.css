@@ -6,6 +6,7 @@ body{
 	max-width: 1024px;
 	margin: 0 auto;
 	padding: 0;
+	background: #EEFFFF;
 	
 	  
 }
@@ -13,15 +14,15 @@ body{
 h1{
 	margin: 0;
 	padding: .52803333333333% 1.04166666667% 0;
-	
-	font-family: arial, sans-serif;
+	color: #990000;
+	font-family: arial, helvetica, sans-serif;
 	
 }
 
 h2{
 	margin: 0;
 	padding: .52803333333333% 1.04166666667% 0;
-	color: #000;
+	color: #990000;
 	font-family: arial, helvetica, sans-serif;
 	
 }
@@ -29,13 +30,19 @@ h2{
 h3{
 	margin: 0;
 	padding: .52803333333333% 1.04166666667% 0;
+	color: #990000;
 	font-family: arial, helvetica, sans-serif;
 }
 
 h4, h5{
 		margin: 0;
 		padding: .52803333333333% 1.04166666667% 0;
+		color: #990000;
 		font-family: arial, helvetica, sans-serif;
+}
+
+p{color: #990000;
+
 }
 
 /*div {
@@ -47,7 +54,7 @@ h4, h5{
 nav {
 	margin: 0;
 	width: 100%; 
-	float: left;
+	float: none;
 }
 
 header {
@@ -56,7 +63,8 @@ header {
 }
 	
 section {
-	width:55%;
+	width:45%;
+	float: none;
 	
 }
 
@@ -67,6 +75,7 @@ section img {
 
 article {
 	width:65%;
+	min-width: 320px;
 	float: left;
 	
 }
@@ -107,6 +116,12 @@ a:hover{
 	color: green;
 }
 
+a:link {
+	
+	text-decoration:none;
+	
+}
+
 input:focus{
 	background: #FFFFB3;
 }
@@ -121,25 +136,41 @@ textarea:focus{
 	
 }
 
-#button{
-	 
+.nbutton{
+	display: inline;
+	margin: 1.5625% auto;
+	padding:1.5625% 1.5625% 0;
+	background-color: #00FFFF;
+	height: 10px;
+	width: 20%;
+	border: #00FFFF;
+	border-radius: 5px;
+	font-size: .85em;
+	text-align: center; 
 	
 	
 }
 
-header {
-
-	
-	
+#even{
+	color: #CC9933;
 }
 
 header nav{
 	float: left;
 }
 aside {
+	
 	width: 35%;
 	float: right;
-	
+	text-align: center;
+}
+
+aside h2 {
+	color: #CC9933;
+}
+
+aside h3 {
+	color: #CC9933;
 }
 
 aside img{
@@ -150,9 +181,17 @@ aside img{
 	margin-right: 0;
 	margin-left: 0;
 	width: 35%;
+}
+
+aside a:link {
 	
+	color: white;
+	
+}
 
-
+aside a:visited {
+	
+	color: white;
 	
 }
 
@@ -184,6 +223,22 @@ main img {
 	max-height: 100%;
 	
 }
+
+#button{
+	
+	margin: 1.5625% auto;
+	padding:1.5625% 1.5625% 0;
+	background-color: #00CC33;
+	height: 35px;
+	width: 66%;
+	border: #00CC33;
+	border-radius: 15px;
+	font-size: 1.5em;
+	text-align: center; 
+	
+	
+}
+
 table{
 	border-collapse: collapse;
 	border: 1px solid #000;
@@ -213,7 +268,7 @@ footer {
 }
 
 footer p {
-
+	font-size: .85em;
 	margin-bottom: 0;
 	padding-bottom: .52803333333333%;
 }
@@ -221,7 +276,7 @@ footer p {
 #footer_container{
 	margin-right: 0;
 	margin-left: 0;
-	width: 2.9296875%;
+	width: 3.9296875%;
 	
 
 
@@ -239,7 +294,15 @@ footer p {
 	margin-right: 0;
 	margin-left: 0;
 	width: 20.3%;
-	/*height: 135px;*/
+
+
+	
+}
+
+#logo_container_2{
+	margin-right: 0;
+	margin-left: 0;
+	width: 40.3%;
 
 
 	
@@ -254,6 +317,8 @@ footer p {
 
 
 
+
+
 .clearFix {
 
 	clear: both;
@@ -264,6 +329,59 @@ footer p {
 
 	clear: both;
 	
+}
+
+#floatRight {
+
+	float: right; 
+	
+}
+
+#floatLeft {
+
+	float: left; 
+	
+}
+
+.gallerycontainer{
+position: relative;
+/*Add a height attribute and set to largest image's height to prevent overlaying*/
+}
+
+.thumbnail img{
+border: 1px solid white;
+margin: 0 5px 5px 0;
+}
+
+.thumbnail:hover{
+background-color: transparent;
+}
+
+.thumbnail:hover img{
+border: 1px solid blue;
+}
+
+.thumbnail span{ /*CSS for enlarged image*/
+position: absolute;
+background-color: lightyellow;
+padding: 5px;
+left: -1000px;
+border: 1px dashed gray;
+visibility: hidden;
+color: black;
+text-decoration: none;
+}
+
+.thumbnail span img{ /*CSS for enlarged image*/
+border-width: 0;
+padding: 2px;
+}
+
+.thumbnail:hover span{ /*CSS for enlarged image*/
+visibility: visible;
+top: 0;
+left: 230px; /*position where enlarged image should offset horizontally */
+z-index: 50;
 }
 
 /*Media Queries**********************/
@@ -309,6 +427,8 @@ section img {
 /*Mobile Landscape to Tablet Portrait (devices and browsers)*/
 @media screen and (min-width: 480px) and (max-width: 767px){
 
+
+
 header nav{
 	float: none;
 	}
@@ -318,6 +438,23 @@ div {
 	-webkit-column-count: 2;
 	color: #CC0033;}
 	
+article {
+	text-align: center;
+	width:100%;
+	min-width: 320px;
+	float: none;
+	
+}
+
+#article_container{
+	margin-right: 0;
+	margin-left: 0;
+	width: 100%;
+	
+
+
+	
+}
 aside {
 	float: none;
 }
@@ -334,6 +471,10 @@ section img {
 
 /*Mobile Portrait Size to Mobile Landscape (devices and browsers)*/
 @media screen and (max-width: 479px){
+
+header {
+	display: none;
+}
 
 header nav{
 	float: none;
