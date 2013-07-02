@@ -45,6 +45,11 @@ p{color: #990000;
 
 }
 
+#offset_bgcolor {
+	
+		background: #FFF;
+}
+
 /*div {
 	-moz-column-count: 3;
 	-webkit-column-count: 3;
@@ -55,11 +60,13 @@ nav {
 	margin: 0;
 	width: 100%; 
 	float: none;
+	
 }
 
 header {
 	width:45%;
 	float: right;
+	
 }
 	
 section {
@@ -77,6 +84,7 @@ article {
 	width:65%;
 	min-width: 320px;
 	float: left;
+	
 	
 }
 
@@ -163,6 +171,8 @@ aside {
 	width: 35%;
 	float: right;
 	text-align: center;
+	background: #FFF;
+	
 }
 
 aside h2 {
@@ -262,6 +272,7 @@ th {
 
 footer {
 	clear: both;
+	background: #FFF;
 	
 	
 
@@ -294,7 +305,7 @@ footer p {
 	margin-right: 0;
 	margin-left: 0;
 	width: 20.3%;
-
+	
 
 	
 }
@@ -303,7 +314,7 @@ footer p {
 	margin-right: 0;
 	margin-left: 0;
 	width: 40.3%;
-
+	
 
 	
 }
